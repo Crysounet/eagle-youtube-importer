@@ -1,1 +1,7 @@
-ewogICJuYW1lIjogIllvdVR1YmUgVVJMIEltcG9ydGVyIiwKICAidmVyc2lvbiI6ICIxLjAuMCIsCiAgImRlc2NyaXB0aW9uIjogIkJhdGNoIGltcG9ydCBZb3VUdWJlIFVSTHMgaW50byBFYWdsZSIsCiAgInR5cGUiOiAid2luZG93IiwKICAibWFpbiI6ICJpbmRleC5qcyIKfQ==
+{
+  "name": "YouTube URL Importer",
+  "version": "1.0.0",
+  "description": "Batch import YouTube URLs into Eagle",
+  "type": "window",
+  "main": "index.js"
+}
