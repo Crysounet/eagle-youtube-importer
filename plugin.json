@@ -1,0 +1,7 @@
+{
+  "name": "YouTube URL Importer",
+  "version": "1.0.0",
+  "description": "Batch import YouTube URLs into Eagle",
+  "type": "window",
+  "main": "index.js"
+}
