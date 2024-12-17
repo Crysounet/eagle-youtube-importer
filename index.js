@@ -4,9 +4,22 @@ import { Card, CardHeader, CardTitle, CardContent, Textarea, Button } from '@/co
 const YouTubeImporter = () => {
   const [urls, setUrls] = useState('');
 
-  const handleImport = () => {
-    // TODO: Implement URL parsing and import logic
-    console.log('Importing URLs:', urls.split('\n'));
+  const handleImport = async () => {
+    const urlList = urls.split('\n').map((url) => url.trim()).filter((url) => url);
+
+    for (const url of urlList) {
+      try {
+        // Call Eagle API to add the URL as a new reference
+        await addYouTubeReference(url);
+        console.log(`Added reference for: ${url}`);
+      } catch (error) {
+        console.error(`Failed to add reference for ${url}: `, error);
+      }
+    }
+  };
+
+  const addYouTubeReference = async (url) => {
+    // TODO: Implement API call to add the YouTube URL as a reference in Eagle
   };
 
   return (
