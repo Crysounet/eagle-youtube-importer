@@ -19,7 +19,28 @@ const YouTubeImporter = () => {
   };
 
   const addYouTubeReference = async (url) => {
-    // TODO: Implement API call to add the YouTube URL as a reference in Eagle
+    const apiUrl = 'http://localhost:41595/api/reference';
+    const apiKey = 'YOUR_API_KEY_HERE'; // Replace with your actual API key
+
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Api-Key': apiKey,
+      },
+      body: JSON.stringify({
+        title: 'YouTube Video',
+        url,
+        type: 'video',
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`API request failed with status code ${response.status}`);
+    }
+
+    const data = await response.json();
+    return data;
   };
 
   return (
